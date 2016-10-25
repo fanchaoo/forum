@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mapper.MessageMapper">
+
+
+    <insert id="insertMessage">
+        insert into message(uid,other_id,other_username,operation,post_id,displayed_content)
+        values(#{uid},#{otherId},#{otherUsername},#{operation},#{postId},#{displayedContent})
+    </insert>
+
+    <select id="listMessageByUid" resultType="com.fc.model.Message">
+        select * from message where uid=#{uid}
+    </select>
+
+</mapper>

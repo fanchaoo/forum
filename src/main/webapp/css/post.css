@@ -1,0 +1,285 @@
+
+/*头部内容，帖子内容*/
+.main-left .post-content{
+    width: 688px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.main-left .post-content .post-title{
+    font: 600 16px/30px "微软雅黑";
+    width: 650px;
+    padding: 20px;
+}
+
+.main-left .post-content .post-user{
+    position: relative;
+    width: 688px;
+    padding: 20px;
+    border-bottom: 1px dashed #E0E0E0;
+}
+
+.main-left .post-content .post-user .user-image{
+    float: left;
+    margin-right: 10px;
+}
+
+.main-left .post-content .post-user .user-image img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.main-left .post-content .post-user .user-info{
+    float: left;
+}
+
+.main-left .post-content .post-user .user-info .user-name{
+    font: 12px/2 "微软雅黑";
+    color: #f2cf2e;
+}
+
+.main-left .post-content .post-user .user-info .post-time{
+    font: 12px/2 "微软雅黑";
+    color: #999;
+}
+
+
+.main-left .post-content .post-user .other-count{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.main-left .post-content .post-user .other-count a{
+    font: 12px "微软雅黑";
+    color: #999;
+}
+
+.main-left .post-content .post-desc{
+    padding: 20px;
+    margin-bottom: 30px;
+    font: 14px/1.5 "微软雅黑";
+}
+
+
+
+/*中间部分*/
+.main-left .post-reply{
+    width: 688px;
+    margin-bottom: 10px;
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+/*中部标题*/
+.main-left .post-reply .post-reply-title{
+    padding: 10px 20px 20px;
+    position: relative;
+    border-bottom: 1px dashed #ccc;
+}
+
+.main-left .post-reply .post-reply-title h2{
+    font: 600 16px/26px "微软雅黑";
+    color: #000;
+}
+
+.main-left .post-reply .post-reply-title a{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    height: 28px;
+    width: 70px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/28px "微软雅黑";   
+}
+
+/*中部回帖列表项内容*/
+.main-left .post-reply .post-reply-content{
+
+}
+
+.main-left .post-reply .post-reply-item{
+    position: relative;
+    width: 688px;
+    padding: 18px;
+    border-bottom: 1px dashed #E0E0E0;
+}
+
+.main-left .post-reply .post-reply-item .item-image{
+    float: left;
+    margin-right: 10px;
+}
+
+.main-left .post-reply .post-reply-item .item-image img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.main-left .post-reply .post-reply-item .item-info{
+    float: left;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-user-name a{
+    font: 12px/2.2 "微软雅黑";
+    color: #f2cf2e;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-content{
+    font: 14px/2.2 "微软雅黑";
+    color: #000;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-date{
+    font: 12px/2.2 "微软雅黑";
+    color: #999;
+}
+
+
+/*楼中楼*/
+.main-left .post-reply .post-reply-item .item-info .item-more{
+    width: 590px;
+    background-color: #eff0f2;
+    padding: 10px 10px;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-wrap{
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.62);
+}
+
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-1{
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-1 a.item-more-user{
+    font: 12px/2.2 "微软雅黑";
+    color: #5c73ff;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-1 span{
+    font: 12px/2.2 "微软雅黑";
+    color: #555;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-date{
+    font: 12px/2.2 "微软雅黑";
+    color: #999;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-other{
+    position: absolute;
+    bottom: 10px;
+    right: -8px;
+
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .item-more-other a{
+    color: #25BB9B;
+    font-size: 12px;
+}
+
+/*楼中楼的回复框*/
+.main-left .post-reply .post-reply-item .item-info .item-more .reply-input{
+    position: relative;
+    padding: 30px 0;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .reply-input textarea{
+    width: 570px;
+    height: 40px;
+    border: 1px solid #d4d4d4;
+    color: #34495e;
+    border-radius: 3px;
+    overflow-y: hidden;
+}
+
+.main-left .post-reply .post-reply-item .item-info .item-more .reply-input button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    width: 70px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/28px "微软雅黑";
+}
+
+
+/*每个条目右下角的回复和赞*/
+.main-left .post-reply .post-reply-item .item-other{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+}
+
+.main-left .post-reply .post-reply-item .item-other a{
+    color: #25BB9B;
+    font-size: 12px;
+}
+
+/*嵌套的更多回复内容*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*底部富文本框*/
+.main-left .post-reply-textarea{
+    position: relative;
+    padding: 15px 0 60px;
+    width: 688px;
+    background-color: #fff;
+}
+
+.main-left .post-reply-textarea .reply-button{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    height: 28px;
+    width: 70px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/28px "微软雅黑";
+}
+.item-content > img{
+    width:590px;
+}
+
+
+

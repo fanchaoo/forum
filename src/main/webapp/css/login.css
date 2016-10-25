@@ -1,0 +1,122 @@
+.main{
+    margin-top: 20px;
+    padding: 0;
+    border: 1px solid #ddd;
+    height: 500px;
+}
+
+.main .buttons{
+    border-bottom: 1px solid #f3f4f5;
+}
+
+.main .buttons a{
+    width: 479px;
+    height: 80px;
+    font: bold 24px/80px "微软雅黑";
+    text-align: center;
+}
+
+
+.main .buttons #login-button{
+    float: left;
+}
+
+.main .buttons #login-button:hover{
+    color: #25bb9b;
+}
+
+.main .buttons #register-button{
+    float: right;
+}
+
+.main .buttons #register-button:hover{
+    color: #333;
+}
+
+.unselected{
+    background-color: #f3f4f5;
+    color: #333;
+}
+
+.selected{
+    background-color: #fff;
+    color: #25bb9b;
+}
+
+
+/*主体区域*/
+
+.main .contents #login-area,
+.main .contents #register-area{
+    padding: 90px 250px;
+    margin: 0 auto;
+    font: 16px/36px "微软雅黑";
+}
+
+#login-area input,
+#register-area input{
+    border: 1px solid #d4d4d4;
+    color: #34495e;
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+    padding: 8px 5px;
+    width: 400px;
+    height: 36px;
+    border-radius: 3px;
+    outline: 0;
+}
+
+#login-area .email,
+#register-area .email{
+    margin-bottom: 20px;
+}
+
+#login-area .password,
+#register-area .password{
+    margin-bottom: 20px;
+}
+
+#login-area button{
+    width: 200px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/40px "微软雅黑";
+}
+
+#login-area button#forget-password{
+    float: right;
+    margin-right: 20px;
+}
+
+.main .contents #register-area{
+
+}
+
+
+#register-area #register-submit{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 400px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/40px "微软雅黑";
+}
+
+.error-message{
+    color: red;
+    padding-left: 45px;
+}
+
+
+
+
+
+
+
+
+

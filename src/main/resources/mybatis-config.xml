@@ -1,0 +1,11 @@
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+        <!--映射下划线风格到驼峰风格-->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+
+</configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mapper.ReplyMapper">
+
+    <resultMap type="com.fc.model.User" id="userMap">
+        <id column="uid" property="uid"/>
+        <result column="username" property="username"/>
+        <result column="head_url" property="headUrl"/>
+    </resultMap>
+
+    <resultMap type="com.fc.model.Reply" id="replyMap">
+        <id column="rid" property="rid"/>
+        <result column="content" property="content"/>
+        <association property="user" javaType="com.fc.model.User" resultMap="userMap" />
+    </resultMap>
+
+    <resultMap type="com.fc.model.Comment" id="commentMap">
+        <id column="cid" property="cid"/>
+        <result column="content" property="content"/>
+        <association property="user" javaType="com.fc.model.User" resultMap="userMap" />
+    </resultMap>
+
+
+    <insert id="insertReply">
+        insert into reply(content,uid,pid,reply_time) values(#{content},#{user.uid},#{post.pid},date_format(now(),'%Y-%c-%d %H:%i:%s'))
+    </insert>
+
+    <select id="listReply" resultMap="replyMap">
+        select r.rid,r.content,u.uid,u.username,u.head_url from reply r join user u on r.uid=u.uid
+        where pid=#{pid}
+    </select>
+
+    <insert id="insertComment">
+        insert into comment(content,uid,rid,comment_time) values(#{content},#{user.uid},#{reply.rid},date_format(now(),'%Y-%c-%d %H:%i:%s'))
+    </insert>
+
+    <select id="listComment" resultMap="commentMap">
+        select c.cid,c.content,u.uid,u.username,u.head_url from comment c join user u on c.uid=u.uid
+        where rid=#{rid}
+    </select>
+
+    <select id="getContentByRid" resultType="String">
+        select content from reply where rid=#{rid}
+    </select>
+
+</mapper>

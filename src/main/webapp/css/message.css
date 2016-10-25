@@ -1,0 +1,49 @@
+.main{
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px 20px 60px;
+}
+
+/*头部标题*/
+.message-header{
+    position: relative;
+    font: 700 16px/52px "微软雅黑";
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.message-header span{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background-color: #FF6547;
+}
+
+
+/*主体*/
+.m-date{
+    font: 700 14px/52px "微软雅黑";
+    color: #000;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.m-list{
+    font: 14px/34px "微软雅黑";
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+
+
+/*覆盖主体左部背景色*/
+.main-left{
+    background-color: #fff;
+}
+
+
+
+.main-left .share{
+    padding-left: 10px;
+    height: 52px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+/*覆盖base.css中的span*/
+.main-left .share-left span{
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    right: 5px;
+    height: 8px;
+    width: 8px;
+    background-color: transparent;
+}
+
+
+/*根话题列表*/
+
+.main-left .topic-root{
+    background-color: #fff;
+}
+
+.main-left .topic-root .topic-root-wrap{
+    border-top: 1px solid #E0E0E0;
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 14px;
+    background-color: #fff;
+}
+
+.main-left .topic-root a{
+    display: inline-block;
+    height: 24px;
+    border-radius: 12px;
+    padding: 0px 12px;
+    border: 1px solid #EAEAEA;
+    font: 14px/20px "微软雅黑";
+    color: #222;
+    background-color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.main-left .topic-root a:hover{
+    color: #fff;
+    background-color: #1abc9c;
+    text-decoration: none;
+}
+
+
+
+
+/*话题列表*/
+.main-left .topic-list{
+    background-color: #fff;
+}
+
+.main-left .topic-list .topic-list-wrap{
+    border-top: 1px solid #E0E0E0;
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 14px;
+    background-color: #fff;
+}
+
+.main-left .topic-list div.topic-odd,
+.main-left .topic-list div.topic-even{
+    width: 315px;
+    height: 100px;
+}
+
+.main-left .topic-list div.topic-odd{
+    float: left;
+}
+
+.main-left .topic-list div.topic-even{
+    float: right;
+}
+
+
+.main-left .topic-list .topic-image img{
+    width: 58px;
+    height: 58px;
+}
+
+.main-left .topic-list .topic-content{
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.main-left .topic-list .topic-content a.topic-name{
+    display: block;
+    font: 600 15px/20px "微软雅黑";
+    color: #0b9074;
+}
+
+.main-left .topic-list .topic-content a.topic-desc{
+    display: block;
+    font: 14px/20px "微软雅黑";
+    color: #000;
+}
+
+.main-left .topic-more{
+    text-align: center;
+    line-height: 32px;
+    border-top: 1px solid #E0E0E0;
+    background-color: #d7d7da;
+}
+
+.main-left .topic-more a{
+    color: #666666;
+}
+
+
+/*遮罩层处理*/
+
+.mask{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+}
+
+.upon-mask{
+    display: none;
+    position: fixed;
+    padding: 55px 21px; 
+    border: 1px solid #fff;
+    border-radius: 3px;
+    width: 500px;
+    height: 160px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -250px;
+    z-index: 1000;
+}
+
+.upon-mask input{
+    border: 1px solid #d4d4d4;
+    color: #34495e;
+    font-size: 14px;
+    padding: 8px 5px;
+    width: 350px;
+    height: 36px;
+    border-radius: 3px;
+}
+
+.upon-mask button{
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/36px "微软雅黑";
+}
+
+.upon-mask span{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+
+

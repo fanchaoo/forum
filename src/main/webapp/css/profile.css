@@ -1,0 +1,169 @@
+body{
+    background-color: #fff;
+}
+
+.main{
+    background-color: #fff;
+}
+
+
+/*左部分*/
+.m-left{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 630px;
+    float: left;
+    padding: 10px 20px;
+}
+
+.m-left .user-image{
+    float: left;
+    margin-right: 20px;
+}
+
+.m-left .user-image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+}
+
+.m-left .user-info{
+    float: left;
+    font: 14px/1.8 "微软雅黑";
+    color: #333;
+}
+
+.m-left .user-info .user-name{
+    font: 600 18px/1.8 "微软雅黑";
+    color: #222;
+}
+
+
+/*两个按钮*/
+.m-left .user-button{
+    position: relative;
+    padding: 15px 0;
+}
+
+.m-left .user-button a{
+    position: absolute;
+    height: 32px;
+    width: 100px;
+    text-align: center;
+/*    background-color: rgb(0, 176, 145);
+    color: rgb(255, 255, 255);*/
+    border-radius: 3px;
+    font: 14px/32px 微软雅黑;
+}
+
+.m-left .user-button a.button-chat{
+    left: 90px;
+}
+
+
+
+
+.m-left .user-post{
+    border-top: 1px dashed #ddd;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.m-left .user-post .user-post-title{
+    position: relative;
+    font: 700 18px/1.8 "微软雅黑";
+    color: #333;
+    padding-left: 7px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.m-left .user-post .user-post-title span{
+    position: absolute;
+    top: 11px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background-color: #FF6547;
+}
+
+.m-left .user-post .user-post-list{
+    padding: 20px 0 200px;
+}
+
+.m-left .user-post .user-post-list li{
+    position: relative;
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0 30px;
+}
+
+.m-left .user-post .user-post-list li span.user-post-time{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 12px;
+    color: #666;
+}
+
+.m-left .user-post .user-post-list li a{
+    font: 15px/2 "微软雅黑";
+    color: #259;
+}
+
+.m-left .user-post .user-post-list li a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/*右部分*/
+.m-right{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 320px;
+    float: right;
+    padding: 20px;
+    line-height: 46px;
+}
+
+.m-right .user-follow{
+    border-bottom: 1px dashed #ddd;
+}
+
+.m-right .user-attr{
+    border-bottom: 1px dashed #ddd;
+}
+
+.m-right .user-count{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.button-follow{
+    background-color: rgb(0, 176, 145);
+    color: rgb(255, 255, 255);
+}
+
+.button-unfollow{
+    border:1px solid #ccc;
+    background-color: #eee;
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

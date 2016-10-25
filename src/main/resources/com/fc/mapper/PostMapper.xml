@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mapper.PostMapper">
+
+
+    <resultMap type="com.fc.model.User" id="userMap">
+        <id column="uid" property="uid"></id>
+        <result column="username" property="username"></result>
+        <result column="head_url" property="headUrl"></result>
+    </resultMap>
+
+    <resultMap type="com.fc.model.Post" id="postMap">
+        <id column="pid" property="pid"/>
+        <result column="title" property="title"/>
+        <result column="publish_time" property="publishTime"/>
+        <result column="reply_time" property="replyTime"/>
+        <result column="reply_count" property="replyCount"/>
+        <result column="like_count" property="likeCount"/>
+        <result column="scan_count" property="scanCount"/>
+        <association property="user" javaType="com.fc.model.User" resultMap="userMap" />
+    </resultMap>
+
+    <resultMap type="com.fc.model.Post" id="post2Map">
+        <id column="pid" property="pid"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="publish_time" property="publishTime"/>
+        <result column="reply_time" property="replyTime"/>
+        <result column="reply_count" property="replyCount"/>
+        <result column="like_count" property="likeCount"/>
+        <result column="scan_count" property="scanCount"/>
+        <association property="user" javaType="com.fc.model.User" resultMap="userMap" />
+    </resultMap>
+
+
+    <select id="listPostByUid" resultType="com.fc.model.Post">
+        select uid,pid,title,publish_time from post where uid=#{uid}
+    </select>
+
+    <insert id="insertPost">
+        <selectKey resultType="int" order="AFTER" keyProperty="pid">
+            select last_insert_id() as pid
+        </selectKey>
+        insert into post(title,content,publish_time,reply_time,reply_count,like_count,scan_count,uid,tid)
+        values(#{title},#{content},#{publishTime},#{replyTime},#{replyCount},#{likeCount},#{scanCount},#{user.uid},#{topic.tid})
+    </insert>
+
+    <select id="listPostByTime" resultMap="postMap">
+        select u.uid,u.username,u.head_url,p.pid,p.title,p.publish_time,p.reply_time,p.reply_count,p.like_count,p.scan_count from post p
+        join user u on p.uid = u.uid
+        order by p.reply_time desc limit #{offset},#{limit}
+    </select>
+
+    <select id="selectPostCount" resultType="int">
+        select count(*) from post
+    </select>
+
+    <select id="getPostByPid" resultMap="post2Map">
+        select u.uid,u.username,u.head_url,p.pid,p.title,p.content,p.publish_time,p.reply_time,p.reply_count,p.like_count,p.scan_count from post p
+        join user u on p.uid = u.uid
+        where p.pid=#{pid}
+    </select>
+
+    <update id="updateReplyCount">
+        update post set reply_count = reply_count + 1 where pid = #{pid}
+    </update>
+
+    <update id="updateScanCount">
+        update post set scan_count = scan_count + 1 where pid = #{pid}
+    </update>
+
+    <update id="updateReplyTime">
+        update post set reply_time = date_format(now(),'%Y-%c-%d %H:%i:%s')
+        where pid=#{pid}
+    </update>
+
+    <select id="getUidByPid" resultType="int">
+        select uid from post where pid=#{pid}
+    </select>
+
+    <select id="getTitleByPid" resultType="String">
+        select title from post where pid=#{pid}
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

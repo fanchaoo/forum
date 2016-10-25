@@ -1,0 +1,60 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <context:component-scan base-package="com.fc"/>
+    <mvc:annotation-driven/>
+
+    <!--上传文件-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+    <!-- 视图解析器，JSP-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView"/>
+        <!-- 设置前缀，即视图所在的路径 -->
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <!-- 设置后缀，即视图的扩展名 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!--配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*" />
+            <bean class="com.fc.interceptor.LoginInterceptor">
+                <property name="excludedUrls">
+                    <list>
+                        <value>/toIndex.do</value>
+                        <value>/upload.do</value>
+                        <value>/toLogin.do</value>
+                        <value>/register.do</value>
+                        <value>/login.do</value>
+                        <value>/activate.do</value>
+                        <value>/logout.do</value>
+                        <value>/toPost.do</value>
+                        <value>/listTopic.do</value>
+                        <value>/listPostByTime.do</value>
+                        <value>/forgetPassword.do</value>
+                        <value>/afterForgetPassword.do</value>
+                        <value>/verify.do</value>
+
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

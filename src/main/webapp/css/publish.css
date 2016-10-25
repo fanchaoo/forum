@@ -1,0 +1,104 @@
+.main{
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px 20px 60px;
+}
+
+/*头部标题*/
+.pub-header{
+    position: relative;
+    font: 700 16px/52px "微软雅黑";
+    color: #000;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.pub-header span{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background-color: #FF6547;
+}
+
+
+/*输入框*/
+.pub-title{
+    padding-bottom: 20px;
+}
+
+.pub-title input{
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    color: #34495e;
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+    padding: 8px 5px;
+    width: 920px;
+    height: 40px;
+}
+
+/*话题标签内容*/
+.pub-topic{
+    position: relative;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.pub-topic span{
+    position: absolute;
+}
+
+.pub-topic .topic-list{
+    padding-left: 50px;
+}
+
+.pub-topic .topic-list a{
+    display: inline-block;
+    height: 24px;
+    border-radius: 12px;
+    padding: 0px 12px;
+    border: 1px solid #EAEAEA;
+    font: 14px/20px "微软雅黑";
+    color: #222;
+    background-color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.pub-topic .topic-list a:hover{
+    color: #fff;
+    background-color: #1abc9c;
+    text-decoration: none;
+}
+
+
+/*富文本编辑器*/
+
+.pub-textarea{
+    position: relative;
+}
+
+.pub-textarea .pub-button{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 126px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #00B091;
+    color: #fff;
+    font: 14px/36px "微软雅黑";
+}
+
+
+
+
+
+
+
+
+
+
