@@ -10,7 +10,7 @@
         <ul class="left-nav">
             <li class="current-nav"><a href="toIndex.do">首页</a></li>
             <li><a href="listTopic.do">话题</a></li>
-            <li><a href="listTopic.do">文章</a></li>
+            <li><a href="listImage.do">文章</a></li>
             <li><a href="toMessage.do">消息</a></li>
         </ul>
 
