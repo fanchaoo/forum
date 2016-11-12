@@ -6,4 +6,7 @@
         select tid,name,content,image from topic
     </select>
 
+    <select id="listImage" resultType="string">
+        select image_url from image
+    </select>
 </mapper>
