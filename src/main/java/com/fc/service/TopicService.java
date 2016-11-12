@@ -21,5 +21,9 @@ public class TopicService {
     public List<Topic> listTopic() {
         return topicMapper.listTopic();
     }
+
+    public List<String> listImage() {
+        return topicMapper.listImage();
+    }
 }
 
