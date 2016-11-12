@@ -51,6 +51,7 @@
                         <value>/forgetPassword.do</value>
                         <value>/afterForgetPassword.do</value>
                         <value>/verify.do</value>
+			<value>/listImage.do</value>
 
                     </list>
                 </property>
