@@ -774,7 +774,10 @@ CREATE TABLE `user` (
   `scan_count` int(11) DEFAULT '0',
   `follow_count` int(11) DEFAULT '0',
   `follower_count` int(11) DEFAULT '0',
-  PRIMARY KEY (`uid`)
+  PRIMARY KEY (`uid`),
+  KEY `email` (`email`),
+  KEY `post_count` (`post_count`),
+  KEY `join_time` (`join_time`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
