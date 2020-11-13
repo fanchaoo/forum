@@ -676,7 +676,7 @@ CREATE TABLE `post` (
   KEY `tid` (`tid`),
   CONSTRAINT `post_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `user` (`uid`),
   CONSTRAINT `post_ibfk_2` FOREIGN KEY (`tid`) REFERENCES `topic` (`tid`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of post
